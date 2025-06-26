@@ -13,13 +13,22 @@ export function Welcome() {
 	return (
 		<div className={styles.welcomeContainer}>
 			<motion.div
-				initial={{ opacity: 0, y: 30 }}
+				initial={{ opacity: 0, y: 200 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 2, ease: "easeOut" }}
+				transition={{ duration: 2, ease: "easeInOut" }}
 			>
 				<h1 className={styles.title}>خوش آمدید 👋</h1>
 			</motion.div>
-			<Button onClick={handleRedirectToAuth} text="مشاهده فرم لاگین" />
+			<div
+				style={{
+					width: "20rem",
+				}}
+			>
+				<Button
+					onClick={handleRedirectToAuth}
+					text="مشاهده فرم لاگین"
+				/>
+			</div>
 		</div>
 	);
 }

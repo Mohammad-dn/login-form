@@ -33,7 +33,7 @@ export function AuthScreen() {
 					)}
 					<Button
 						isLoading={isLoading}
-						disabled={!isButtonDisabled}
+						disabled={isButtonDisabled}
 						text="ورود"
 					/>
 				</div>
