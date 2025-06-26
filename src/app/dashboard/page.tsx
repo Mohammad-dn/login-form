@@ -1,5 +1,7 @@
+import { Welcome } from "@/components";
+
 const dashboardPage = () => {
-	return <div>به داشبورد کاربر خوش آمدید</div>;
+	return <Welcome />;
 };
 
 export default dashboardPage;
