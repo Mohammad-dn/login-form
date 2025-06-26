@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { Button } from "../button/button";
 import styles from "./Welcome.module.scss";
 
@@ -10,6 +11,13 @@ export function Welcome() {
 	const handleRedirectToAuth = () => {
 		router.push("/auth");
 	};
+
+	useEffect(() => {
+		const userDetail = localStorage.getItem("userDetail");
+		if (!userDetail) {
+			router.push("/auth");
+		}
+	}, []);
 	return (
 		<div className={styles.welcomeContainer}>
 			<motion.div
