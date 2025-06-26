@@ -7,6 +7,8 @@ import { getRandomUser } from "../../services/getRandomUser";
 export function useAuth() {
 	const [phone, setPhone] = useState("");
 	const [error, setError] = useState("");
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+
 	const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 	const router = useRouter();
 
@@ -38,6 +40,7 @@ export function useAuth() {
 	}, [phone, convertToEnglishDigits, isValidPhone]);
 
 	const handleSubmit = async (e: React.FormEvent) => {
+		setIsLoading(true);
 		e.preventDefault();
 
 		const normalized = normalizePhone();
@@ -51,8 +54,10 @@ export function useAuth() {
 		const result = await getRandomUser(normalized);
 
 		if (result.success) {
+			setIsLoading(false);
 			router.push("/dashboard");
 		} else {
+			setIsLoading(false);
 			setError(result.error || "خطای نامشخصی رخ داده است.");
 		}
 	};
@@ -63,5 +68,6 @@ export function useAuth() {
 		error,
 		isButtonDisabled,
 		handleSubmit,
+		isLoading,
 	};
 }

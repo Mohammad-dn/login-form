@@ -3,10 +3,12 @@ export const Button = ({
 	onClick,
 	text,
 	disabled = false,
+	isLoading,
 }: {
 	onClick?: () => void;
 	text: string;
 	disabled?: boolean;
+	isLoading?: boolean;
 }) => {
 	return (
 		<button
@@ -15,7 +17,7 @@ export const Button = ({
 			className={styles.customeButton}
 			disabled={disabled}
 		>
-			{text}
+			{isLoading ? <span className={styles.loader}></span> : text}
 		</button>
 	);
 };

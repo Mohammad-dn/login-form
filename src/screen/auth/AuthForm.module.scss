@@ -15,21 +15,31 @@
 		margin-block: auto;
 		padding-inline: 3em;
 		height: 20rem;
-		justify-content: center;
-		align-items: center;
-
-		input {
-			padding: 12px;
-			margin-bottom: 1rem;
-			font-size: 16px;
-			border: 1px solid #ccc;
-			border-radius: 8px;
-			direction: ltr;
-			width: 50%;
-		}
 	}
 }
-
+.inputField {
+	padding-block: 20px;
+	margin-bottom: 2rem;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	width: 98%;
+	padding-inline: 6px;
+	overflow-x: hidden;
+	direction: ltr;
+	&:placeholder-shown {
+		font-size: 20px;
+		text-align: right;
+	}
+}
+.formContainer {
+	width: "50%";
+	padding-inline: 12%;
+	display: "flex";
+	flex-direction: "column";
+	align-items: "center";
+	justify-content: "center";
+}
 .helperText {
 	font-size: 20px;
 	margin-block: 2rem;
@@ -70,7 +80,7 @@
 		form {
 			width: 80%;
 			input {
-				width: 95%;
+				width: 98%;
 			}
 
 			button {

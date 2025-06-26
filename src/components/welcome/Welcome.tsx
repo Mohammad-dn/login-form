@@ -11,15 +11,15 @@ export function Welcome() {
 		router.push("/auth");
 	};
 	return (
-		<motion.div
-			className={styles.welcomeContainer}
-			initial={{ opacity: 0, y: 30 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.8, ease: "easeOut" }}
-		>
-			<h1 className={styles.title}>خوش آمدید 👋</h1>
-
+		<div className={styles.welcomeContainer}>
+			<motion.div
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 2, ease: "easeOut" }}
+			>
+				<h1 className={styles.title}>خوش آمدید 👋</h1>
+			</motion.div>
 			<Button onClick={handleRedirectToAuth} text="مشاهده فرم لاگین" />
-		</motion.div>
+		</div>
 	);
 }
