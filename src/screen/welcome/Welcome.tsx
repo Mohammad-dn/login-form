@@ -33,7 +33,16 @@ export function Welcome() {
       >
         <h1 className={styles.title}>خوش آمدید 👋</h1>
       </motion.div>
-      <Button onClick={handleLogout} text="خروج" />
+      <div
+        style={{
+          display: "flex",
+          gap: 30,
+          flexDirection: "column",
+        }}
+      >
+        برای مشاهده صفحه ورود ابتدا باید خارج شوید
+        <Button onClick={handleLogout} text="خروج" />
+      </div>
     </div>
   );
 }

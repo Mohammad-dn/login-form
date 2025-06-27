@@ -4,7 +4,6 @@ export function middleware(request: NextRequest) {
   const auth = request.cookies.get("auth");
 
   const isAuth = auth?.value === "true";
-  console.log("🚀 ~ middleware ~ isAuth:", isAuth);
   const { pathname } = request.nextUrl;
 
   if (pathname === "/auth" && isAuth) {
