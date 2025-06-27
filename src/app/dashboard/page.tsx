@@ -1,7 +1,7 @@
-import { Welcome } from "@/components";
+import { Welcome } from "@/screen";
 
-const dashboardPage = () => {
-	return <Welcome />;
+const dashboardPage = async () => {
+  return <Welcome />;
 };
 
 export default dashboardPage;

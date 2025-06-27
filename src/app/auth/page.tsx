@@ -1,7 +1,5 @@
 import { AuthScreen } from "@/screen";
 
-const authPage = () => {
-	return <AuthScreen />;
-};
-
-export default authPage;
+export default async function AuthPage() {
+  return <AuthScreen />;
+}

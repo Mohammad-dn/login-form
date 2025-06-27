@@ -1,109 +1,106 @@
 .screenContainer {
-	display: flex;
-	width: 100%;
-	background-color: #fff;
-	height: 100vh;
-	gap: 1em;
-	overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+  gap: 1em;
+  overflow-y: hidden;
 
-	form {
-		display: flex;
-		flex-direction: column;
-		background-color: #fff;
-		border-radius: 12px;
-		width: 40%;
-		margin-block: auto;
-		padding-inline: 3em;
-		height: 20rem;
-	}
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    width: 40%;
+    margin-block: auto;
+    padding-inline: 3em;
+    height: 20rem;
+  }
 }
 .inputField {
-	padding-block: 20px;
-	margin-bottom: 2rem;
-	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	width: 98%;
-	padding-inline: 6px;
-	overflow-x: hidden;
-	direction: ltr;
-	&:placeholder-shown {
-		font-size: 20px;
-		text-align: right;
-	}
+  padding-block: 12px;
+  margin-bottom: 2rem;
+  width: 99%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow-x: hidden;
+  direction: ltr;
+  text-align: center;
+  &::placeholder {
+    font-size: 20px;
+    text-align: right;
+    margin-inline: 12px;
+  }
 }
 .formContainer {
-	width: "50%";
-	padding-inline: 12%;
-	display: "flex";
-	flex-direction: "column";
-	align-items: "center";
-	justify-content: "center";
+  padding-inline: 12%;
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+  justify-content: "center";
 }
 .helperText {
-	font-size: 24px;
-	margin-block: 2rem;
-	text-align: center;
+  font-size: 24px;
+  margin-block: 2rem;
+  text-align: center;
 }
 
 .authImageContainer {
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	img {
-		object-fit: cover;
-		width: 100%;
-		border-radius: 16px;
-	}
+  img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px;
+  }
 }
 
 .errorMessage {
-	color: red;
-	margin-bottom: 1rem;
-	font-size: 0.9rem;
-	text-align: right;
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-align: right;
 }
 
 @media (max-width: 920px) {
 }
 
 @media (max-width: 920px) {
-	.screenContainer {
-		flex-direction: column-reverse;
-		overflow-y: hidden;
-		align-items: center;
-		padding-top: 0;
-		gap: 0;
+  .screenContainer {
+    flex-direction: column-reverse;
+    overflow-y: hidden;
+    align-items: center;
+    padding-top: 0;
+    gap: 0;
 
-		form {
-			width: 80%;
-			input {
-				width: 98%;
-			}
+    form {
+      width: 100%;
 
-			button {
-				width: 100%;
-			}
-		}
-	}
-	.helperText {
-		font-size: 16px;
-		margin-block: 2rem;
-		text-align: center;
-		font-weight: 600;
-	}
+      button {
+        width: 100%;
+      }
+    }
+  }
+  .helperText {
+    font-size: 16px;
+    margin-block: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
 
-	.authImageContainer {
-		width: 100%;
-		padding: 0;
-		height: 55%;
+  .authImageContainer {
+    width: 100%;
+    padding: 0;
+    height: 55%;
 
-		img {
-			width: 100%;
-			height: 100%;
-			border-radius: 0;
-		}
-	}
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
 }
