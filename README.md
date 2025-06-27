@@ -29,7 +29,7 @@ A simple authentication project built with **Next.js (App Router)**, **SCSS**, *
 ### Installation
 
 ```bash
-git clone https://github.com/your-repo/nextjs-auth-app.git
-cd nextjs-auth-app
+git clone https://github.com/Mohammad-dn/login-form
+cd login-form
 npm install
 ```
